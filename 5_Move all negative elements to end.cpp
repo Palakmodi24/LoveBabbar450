@@ -1,0 +1,29 @@
+class Solution {
+  public:
+    void segregateElements(vector<int>& arr) {
+        // Your code goes here
+        vector<int>temp;
+        
+         
+        //store positive
+        
+        for(int i=0;i<arr.size();i++){
+            if(arr[i]>=0){
+                temp.push_back(arr[i]);
+            }
+        }
+        
+        //store negative
+        for(int i=0;i<arr.size();i++){
+            if(arr[i]<0){
+                temp.push_back(arr[i]);
+            }
+        }
+       
+        
+        
+        for(int i=0;i<arr.size();i++){
+            arr[i]=temp[i];
+        }
+    }
+};
